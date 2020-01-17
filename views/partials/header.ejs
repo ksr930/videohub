@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>VIDEOCAPSULE</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/stylesheet/main.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div
+             class="navbar-header ">
+                <a class="navbar-brand" href="/">VIDEOCAPSULE</a>
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2" viewBox="0 0 24 24" focusable="false"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+        </div>
+            <strong>Album</strong>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/">Home <span class="sr-only">(rrent)</span></a>
+                        </li>
+                        <% if(!currentUser){ %>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/signup">Sign up</a>
+                        </li>
+                        <% } else { %>
+                        <li class="nav-item active ml-4 mr-4">
+                            <a href="/profile">Signed In As <%= currentUser.username %></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="/logout">Logout</a>
+                        </li>
+                        <% } %>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+    </nav>
+
